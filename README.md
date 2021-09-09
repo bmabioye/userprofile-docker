@@ -1,4 +1,4 @@
-Sample User Profile 
+SAMPLE USER PROFILE APP
 
 Docker Containerized simple JavaScript example application with Express server 
 
