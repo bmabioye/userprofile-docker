@@ -12,5 +12,10 @@
         "url": "github.com/bmabioye/userprofile-docker"
     },
     "author": "bmabioye",
-    "license": "ISC"
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "mongo-express": "^1.0.0-alpha.4",
+        "mongodb": "^4.1.1"
+    }
 }
