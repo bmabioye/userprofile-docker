@@ -56,13 +56,13 @@ app.post('/update-profile', (req, res) => {
             if (err) throw err;
             console.log('successfully update or inserted');
             client.close();
-            response.send(userObj);
+            response.send(newValues);
         });
     });
 
 })
 app.get('/profile-picture', (req, res) => {
-    var img = fs.readFileSync('profile-1.jpg');
+    var img = fs.readFileSync('profile.jpg');
     res.writeHead(200, { 'Content-Type': 'image/jpg' });
     res.end(img, 'binary');
 });
