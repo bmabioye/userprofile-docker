@@ -3,26 +3,23 @@ const path = require('path');
 const fs = require('fs');
 const MongoClient = require('mongodb').MongoClient;
 const bodyParser = require('body-parser');
-const { response } = require('express');
-const { assert } = require('console');
 const app = express();
-//const testurl = 'mongodb://localhost:27017'; // 'mongodb://bma:ilovemymum@localhost:27017'
-const dburl = 'mongodb://bma:ilovemymum@localhost:27017';
+const dburl = 'mongodb://bma:iloveyou1@localhost:27017';
 const PORT = 3000;
 
 const client = new MongoClient(dburl);
-//const dclient = new MongoClient(testurl);
 
+
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-app.use(bodyParser.json());
+
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, "index.html"));
 });
 app.get('/get-profile', (req, res) => {
-
     var response = res;
 
     client.connect((err) => {

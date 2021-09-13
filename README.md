@@ -15,8 +15,10 @@ create docker containers
 create common network and
 run the container with options (check the yaml file for guide)
 
+
 OR
 run docker-compose <docker-mongdb.yaml>
+docker-compose -f docker-mongodb.yaml up
 
 npm init
 npm start
