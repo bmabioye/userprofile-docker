@@ -8,6 +8,7 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=bma
       - MONGO_INITDB_ROOT_PASSWORD=iloveyou1
+    restart: always
   mongo-express:
     image: mongo-express
     ports:
